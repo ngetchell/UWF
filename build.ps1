@@ -16,7 +16,7 @@ if (-not (Get-Module -Name PSDepend -ListAvailable)) {
     Install-module -Name PSDepend -Repository PSGallery
 }
 Import-Module -Name PSDepend
-Invoke-PSDepend -Path './requirements.psd1' -Import -Force -WarningAction SilentlyContinue
+Invoke-PSDepend -Path './requirements.psd1' -Install -Import -Force -WarningAction SilentlyContinue
 
 $psakeFile = './psakeFile.ps1'
 if ($PSCmdlet.ParameterSetName -eq 'Help') {
